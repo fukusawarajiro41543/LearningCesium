@@ -62,6 +62,7 @@
     var kmlfile = './data/okinawaTaju.kml';
       viewer.dataSources.add(Cesium.KmlDataSource.load(kmlfile));
 
+    // 東京都庁の追加
       var polygon=viewer.entities.add({
           name:"東京都庁",
           description:"ここは東京都庁です。",
@@ -79,6 +80,8 @@
                 outlineColor : Cesium.Color.BLACK
           }
       });
+
+      
       viewer.camera.flyTo({
           destination: Cesium. Cartesian3.fromDegrees(139.691734969185, 35.689513446065, 1000.0),
       });
